@@ -21,11 +21,20 @@ Para generar el archivo `.js` final:
 
 El archivo se generará en `dist/widget.bundle.js`.
 
+## 🧪 Pruebas en Local (Preview)
+
+Para probar la versión de producción localmente simulando un servidor CDN (con CORS habilitado y sin caché):
+
+`npx http-server dist -p 8080 --cors -c-1`
+
+Esto levantará el servidor en `http://127.0.0.1:8080`.
+
 ## 🌐 Cómo usar en una web externa
 
 ### Opción A: Web Component (Recomendada)
-Agrega el script y usa la etiqueta:
+Agrega el script y usa la etiqueta. 
 
+**Para pruebas locales:**
 ```html
-<script src="https://tu-cdn.com/widget.bundle.js"></script>
+<script src="http://127.0.0.1:8080/widget.bundle.js"></script>
 <mi-widget-pro initial-id="55"></mi-widget-pro>
